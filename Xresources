@@ -1,0 +1,15 @@
+! Emacs.font: Consolas-13
+Emacs.font: Liberation Mono-12
+! Emacs.font: Monospace-12
+! Emacs.font: Ubuntu Mono-13
+! Emacs.font: Source Code Pro-13
+Emacs.toolBar: off
+Emacs.verticalScrollBars: off
+Emacs.geometry: 97x26+0+30
+
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+xdvi.editor: emacsclient -a emacs --no-wait +%l %f

@@ -1,0 +1,101 @@
+# Scid resolver configuration
+# Version: 4.5.2, Nov 2013
+# This file contains commands in the Tcl language format.
+# If you edit this file, you must preserve valid Tcl
+# format or it will not set your Scid options properly.
+#
+# Define how to interpret IDs stored in ssp files. Each ID has to
+# have a unique page to link to. It is currently not possible to link
+# to more than one page by means of a single ID, or to get more
+# than one button by any ID. Therefore, PND is handled specially
+# and within pinfo.tcl
+#
+# Syntax of the following array's list entries:
+#
+# IDName: the tag to search for e.g. VIAF searches for
+#         %Bio VIAF-lines and so on
+# link target url: %ID% is replaced by the ID
+# icon name: the icons are specified below as base64 encoded images
+#            They must not live in ::pinfo-namespace!
+# Link text: what to display in pinfo window
+set ::pinfo::idlink(0) {{VIAF} {http://viaf.org/%ID%} {viaflnk} {VIAF}}
+set ::pinfo::idlink(1) {{FIDEID} {http://ratings.fide.com/card.phtml?event=%ID%} {fidelnk} {FIDE}}
+set ::pinfo::idlink(2) {{ICCFID} {http://www.iccf-webchess.com/PlayerDetails.aspx?id=%ID%} {iccflnk} {ICCF}}
+set ::pinfo::idlink(3) {{DSB} {http://www.schachbund.de/dwz/db/spieler.html?zps=%ID%} {dsblnk} {DSB}}
+set ::pinfo::idlink(4) {{BCF} {http://grading.bcfservices.org.uk/getref.php?ref=%ID%} {bcflnk} {BCF}}
+set ::pinfo::idlink(5) {{SchemingMind} {http://www.schemingmind.com/plyrprofile.aspx?profile_id=%ID%} {smlnk} {SchemingMind}}
+#
+# Icons for the icons defined here MUST NOT live in ::pinfo namespace
+#
+image create photo fidelnk -data {
+   R0lGODlhEAAQAOecACIxWSY0XSc2XSg2YCc3Xig3Xik3Xyk4Xyo4Xyo4YCo5Xyo5YCs5Xyo6Xys6
+   YCs6YSw6YCw6YSw7YSw7Yi07Yi48Yi48Yy88Yi89YzA+ZDE/ZDE/ZTI/ZTJAZTJBZjNBZTNBZjRB
+   ZjNCZTRCZjZEaDdEaThEaThGaTlGaTpIazxKbT1KbT9MbkBNb0NQc0VRc0ZScUZUdEhUdEdVdkhV
+   dElVdEpXdk1ZeE5ZeFRef1NgfVRgf1dgf1hhf11nhGFsh2JsiGFtiGJtiGNtiGZyi2lzjWt3kHB4
+   kHN+lnqEm36GnYCJnYmSo4qTpZWbrpWcq5eerZeer5qgrp6ltaGns6asuKesuqetvK60wrC1wLa6
+   xra8x7i9xLu/x7vAyb3CyMvO1MzP09DS2tDT2dHU2dHV2tLV2dPV29PX29fZ3tna3dna3tra3tzd
+   4d3d4dze4Nze4d3e4d3e4tzf4d3f4d3f497f4d7f5N/g4d7h497h5t/h5ODi5OHi5eHj5eLj5eLk
+   5uPl6OTm6efn6eXo6ejq6+rq6+rq7Orr7Ors6+vs7ezt7+3u7+/w8vDw8O/x8fDx8vHx8vHy9PHz
+   9PX19fb29vf39/j4+fr6+/v6+/z9/f39/v//////////////////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
+   /////////////////////////////////////////////////////yH+EUNyZWF0ZWQgd2l0aCBH
+   SU1QACH5BAEKAP8ALAAAAAAQABAAAAjbAEEIHEiwoMGDBz1IGGDhhIkKBhx0IBhiAgUjWMSYiXRH
+   C5IPC0YIfLBji51KV1wESWPpT5chCUBggDGH06UsACYE0DFIEqdGPSBsKIMojxwgRFg84MGmzh5B
+   elbccATp0SNGVjgIWBKpUCJFjH7gcPOGDh8yFzAISGLID6A+f4SQCMQIzhovJVqouDFGTZtDk15Q
+   8EEI0yZKVGrIgCJJU6ZFRxiAQFAEDR4wVXLYkBImzhklCgY2ENEkChMuX55McYLiQMEOBSCkiEFj
+   RgQCGhCC6JCht+7fAwMCADs=
+}
+image create photo iccflnk -data {
+   R0lGODlhEAAQAMZqAAAA/wEB/wMD/wQE/wUF/wYG/wcH/wgI/woK/wsL/wwM/xAQ/xER/xIS/xMT
+   /xQU/xYW/xcX/xgY/xkZ/xoa/xsb/x4e/yEh/yIi/yUl/yYm/ycn/ykp/zIy/zQ0/zY2/zc3/zo6
+   /zs7/zw8/z09/0ZG/0lJ/01N/1hY/1lZ/1pa/1tb/1xc/2Nj/2Vl/2lp/2pq/3R0/3V1/3Z2/3d3
+   /3h4/3t7/3x8/39//4SE/4WF/4uL/42N/4+P/5CQ/5KS/5OT/5SU/5WV/5aW/5eX/5iY/5ub/5+f
+   /6Cg/6Gh/6en/6mp/6qq/66u/6+v/7S0/7i4/7u7/729/7+//8DA/8LC/8PD/8rK/8zM/83N/87O
+   /9PT/9fX/9jY/+Pj/+Tk/+bm/+jo/+vr/+zs//Hx//Ly//T0//b2//j4//z8////////////////
+   /////////////////////////////////////////////////////////////////////////yH+
+   EUNyZWF0ZWQgd2l0aCBHSU1QACH5BAEKAH8ALAAAAAAQABAAAAfjgFJTaF86R2dpXjlIZ2JQUFIV
+   GGMnAAVFaCaWRlQKCRULE1cGBwIgWwQIASFSAAAMDBJKAC4XEEwALRcWTwAUKAwTQwA0GQs9ADIZ
+   Dk0ALGmhw8ULPAAzGgvNK2nBQtYjHNUxJBxOABw/3dZcW0YANl1bUa4eod40aWlHADf5rQAegkmT
+   8QIIgBozXvQqoUWgNWM7kmVg0EwFtAlFiE30kWxDA23cJiwBAAODBFwvdvXaFsvKgAcGQGQJEGGA
+   iFYsJYT5ACBAEDMdAAggMi9FGiVMzmhhcYNMGiwrcJQBk6RKmkAAOw==
+}
+image create photo viaflnk -data {
+   R0lGODlhEAAQAIQaAP8AAP8ICP8QEP8YGP8hIf8pKf8xMf85Of9CQv9SUv9aWv9jY/9zc/97e/+E
+   hP+MjP+UlP+cnP+lpf+trf+1tf/Gxv/Ozv/W1v/e3v/v7////////////////////////yH+EUNy
+   ZWF0ZWQgd2l0aCBHSU1QACH5BAEKAB8ALAAAAAAQABAAAAWDoCZm1lVp1ZVhqSWOSnBpEJNlynC+
+   tCA2LwODJ4IENI+M6AKYESWACuXlIBBFFADwVdgSK9bRBCC5ajBOTYYiNWumIguFPSdmledA42JJ
+   8DIHABhYghoqPAxZTgsEEQwTPBILDFEiAhBIeIYOhgBTd0QZCEpZEBcJA2lLFyolKayqGiEAOw==
+}
+
+image create photo smlnk -data {
+   R0lGODlhEAAQAOMNAAAAABgYITE5OVJSUmNja3Nzc4SEjJycpbW1tcbOztbW3ufn5+/39///////
+   /////yH+EUNyZWF0ZWQgd2l0aCBHSU1QACwAAAAAEAAQAAAEl7AVZEprawCSmkJLQy2HwCiFJgzK
+   1RyAUBBKMhjBEAgGchSFWOGAahACh8GNsEDkBhaPStA6SAA7gytRMHQ8GQFCYcWEMK4DsoNwoS+L
+   hIAwUnxA8Iv6N0gYBDkdDC5KCF0JCAQEgw0MIQxiBD0GTQRdUSETfQcHCAgCADEIjJwgY2N/VIw1
+   lJ0vnTEKISEGRAOeuAhfLhEAOw==
+}
+
+image create photo bcflnk -data {
+   R0lGODlhEAAQAIQRAAAAAAAAIAAAQAAgYCAgIDAwMABAgEBAQGBgYDBvbwCAgD9/fzCQkH9/f2Cg
+   oDCvr4/Pz////////////////////////////////////////////////////////////yH+EUNy
+   ZWF0ZWQgd2l0aCBHSU1QACwAAAAAEAAQAAAFWmCBjGRZEgixFE3kqqwbHUjCGK1r4zJdGINc5Bfs
+   IRrIpFJJkzUAUCcU0HQ9o9ZpNXIFSKE0mFBs3AnNRqJQbVy6k9uuE/IIxKdOh0Jwx3IDAlQEB4SF
+   hoYEIQA7
+}
+
+image create photo dsblnk -data {
+   R0lGODlhEAAQAMZMABIRERYVFDsQDUoTDyMiInUfGWclIDQzM3QmF4QiG0A3G0A3HU47OU49O0VE
+   RE9FI1BNTFFNTFFOTVFOTlJOTlJQT1JRUVJSUVNSUlRTU1VUVFZVVds5LMw+Mto7Kds7L80/NF1d
+   XNs9Mdo/K9s+Mts+M9pAK9xAM9xANNtBNW9iNtxDN9xDONpGLNxFOdlIK9lILH5tN9xQRXh3d458
+   P4iIiK2XTJmZmb2lU6qqqru7u9zAYszMzOzNZuzNZ+zOZ+zOaOzOae3Qbe3Qbu7Rce3Sc93d3e7u
+   7vn39/v5+fz6+v37+///////////////////////////////////////////////////////////
+   ////////////////////////////////////////////////////////////////////////////
+   /////////////////////////////////////////////////////////////////////////yH+
+   EUNyZWF0ZWQgd2l0aCBHSU1QACwAAAAAEAAQAAAHs4BMghAUIi5CPT2Ci4sVEgwpJkGJjI0SDSgv
+   lJWLExUiIj49RZyCGBMyJCk9Q6WCS0sCBSM7Kg41gg66OUxIIScGNDG4NTdMDkxHB0xKFxwgCjYb
+   N0aCBDUzM0xJEyIfCz1GNw7GBzo6DkZIqAkID9VHyMhMMzqwAQMdOAsOBzxMAHRp0xBhAosTQBS5
+   YmIhQoYTHn4odBUhgowSLSQuzDABwooTMIAAIeKKYzcUMnokZBQIADs=
+}

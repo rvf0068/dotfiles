@@ -1,0 +1,11 @@
+# Scid 4.5.2 recent files list
+
+set recentFiles(limit) 10
+
+set recentFiles(menu) 5
+
+set recentFiles(extra) 5
+
+set recentFiles(data) /home/rafael/Dropbox/chess/databases/big/big.si4
+
+set ::recentSort {/home/rafael/Dropbox/chess/databases/big/big {22 + 7 - 0 +}}

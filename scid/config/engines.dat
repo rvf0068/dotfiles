@@ -1,0 +1,38 @@
+# Analysis engines list file for Scid 4.5.2 with UCI support
+
+engine {
+  Name Phalanx-Scid
+  Cmd  /usr/local/share/scid/engines/phalanx-scid/phalanx-scid
+  Args {}
+  Dir  .
+  Elo  0
+  Time 0
+  URL  {}
+  UCI 0
+  UCIoptions {}
+}
+
+engine {
+  Name {Toga II}
+  Cmd  /usr/local/share/scid/engines/togaII1.2.1a/togaII
+  Args {}
+  Dir  .
+  Elo  0
+  Time 0
+  URL  {}
+  UCI 1
+  UCIoptions {}
+}
+
+engine {
+  Name Scidlet
+  Cmd  /usr/local/bin/scidlet
+  Args {}
+  Dir  .
+  Elo  0
+  Time 0
+  URL  {}
+  UCI 0
+  UCIoptions {}
+}
+

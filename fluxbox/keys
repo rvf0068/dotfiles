@@ -153,11 +153,29 @@ Control Mod1 m :RootMenu
 Control Mod1 n :exec nautilus --no-desktop
 Control Mod1 p :exec nm-applet
 Control Mod1 r :MacroCmd {Exec osdctl -s "Reconfiguring,"} {Reconfigure}
-Control Mod1 s :exec gdmflexiserver -a
+Control Mod1 s :exec scid
 Control Mod1 t :exec java -jar ~/Ubuntu\ One/apps/tomighty-0.7.1.jar
 Control Mod1 u :exec jupiter
 Control Mod1 v :exec pavucontrol
 Control Mod1 w :ArrangeWindows
+Control Mod1 z :exec gdmflexiserver -a
+
+rafael
+jvcxb0020
+startx
+
+
+sudo xX
+display 0
+logout
+rvf0068
+jvcxb0020
+rafael
+jvcxb0020
+ 0
+sudo shutdown
+jvcxb0020
+ :exec gdmflexiserver -a
 
 #Volume.  Will lower or raise volume by 5%.  The third key binding will toggle mute.
 None XF86AudioLowerVolume       :Exec amixer sset Master,0 5%-

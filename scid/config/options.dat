@@ -4,7 +4,7 @@
 # If you edit this file, you must preserve valid its Tcl
 # format or it will not set your Scid options properly.
 
-set boardSize 55
+set boardSize 45
 set boardStyle Merida1
 set language E
 set ::pgn::showColor 1
@@ -109,8 +109,8 @@ set ::uci::uciInfo(winc3) 10000
 set ::uci::uciInfo(btime3) 300000
 set ::uci::uciInfo(binc3) 10000
 set ::commenteditor::showboard 1
-set boardfile_lite emptySquare
-set boardfile_dark emptySquare
+set boardfile_lite LightWood1-l
+set boardfile_dark LightWood1-d
 set FilterMaxMoves 80
 set FilterMinMoves 5
 set FilterStepMoves 1

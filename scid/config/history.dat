@@ -1,2 +1,3 @@
 # Scid 4.5.2 combobox history lists
 
+set ::utils::history::listData(::plist::name) smyslov

@@ -1,15 +1,15 @@
 # Analysis engines list file for Scid 4.5.2 with UCI support
 
 engine {
-  Name Phalanx-Scid
-  Cmd  /usr/local/share/scid/engines/phalanx-scid/phalanx-scid
+  Name Stockfish
+  Cmd  /home/rafael/Dropbox/chess/engines/stockfish/stockfish
   Args {}
   Dir  .
   Elo  0
-  Time 0
+  Time 1390103509
   URL  {}
-  UCI 0
-  UCIoptions {}
+  UCI 1
+  UCIoptions {{Hash 1028} {OwnBook false} {MultiPV 1} {{Write Debug Log} false} {{Write Search Log} false} {{Search Log Filename} SearchLog.txt} {{Book File} book.bin} {{Best Book Move} false} {{Contempt Factor} 0} {{Mobility (Midgame)} 100} {{Mobility (Endgame)} 100} {{Pawn Structure (Midgame)} 100} {{Pawn Structure (Endgame)} 100} {{Passed Pawns (Midgame)} 100} {{Passed Pawns (Endgame)} 100} {Space 100} {Aggressiveness 100} {Cowardice 100} {{Min Split Depth} 0} {{Max Threads per Split Point} 5} {Threads 1} {{Idle Threads Sleep} true} {{Clear Hash} {}} {{Skill Level} 20} {{Emergency Move Horizon} 40} {{Emergency Base Time} 60} {{Emergency Move Time} 30} {{Minimum Thinking Time} 20} {{Slow Mover} 70}}
 }
 
 engine {
@@ -18,9 +18,21 @@ engine {
   Args {}
   Dir  .
   Elo  0
-  Time 0
+  Time 1386618528
   URL  {}
   UCI 1
+  UCIoptions {}
+}
+
+engine {
+  Name Phalanx-Scid
+  Cmd  /usr/local/share/scid/engines/phalanx-scid/phalanx-scid
+  Args {}
+  Dir  .
+  Elo  0
+  Time 0
+  URL  {}
+  UCI 0
   UCIoptions {}
 }
 

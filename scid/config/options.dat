@@ -4,7 +4,7 @@
 # If you edit this file, you must preserve valid its Tcl
 # format or it will not set your Scid options properly.
 
-set boardSize 35
+set boardSize 45
 set boardStyle Merida1
 set language E
 set ::pgn::showColor 1
@@ -26,7 +26,7 @@ set suggestMoves 1
 set showVarPopup 0
 set showVarArrows 1
 set blunderThreshold 0.2
-set autoplayDelay 5000
+set autoplayDelay 300000
 set animateDelay 200
 set boardCoords 0
 set boardSTM 1
@@ -39,7 +39,7 @@ set highlightLastMoveWidth 2
 set highlightLastMoveColor grey
 set askToReplaceMoves 1
 set locale(numeric) .,
-set spellCheckFile /usr/local/share/scid/spelling.ssp
+set spellCheckFile /home/rafael/Dropbox/chess/scid/ratings_utf8.ssp
 set autoRaise 1
 set autoIconify 1
 set windowsDock 1
@@ -70,7 +70,7 @@ set engineCoach1 {}
 set engineCoach2 {}
 set scidBooksDir /usr/local/share/scid/books
 set scidBasesDir /usr/local/share/scid/bases
-set ::book::lastBook {}
+set ::book::lastBook Elo2400.bin
 set ::utils::sound::soundFolder /usr/local/bin/sounds
 set ::utils::sound::announceNew 0
 set ::utils::sound::announceForward 0
@@ -240,7 +240,7 @@ set winY(.treeWin8)  -1
 set winX(.treeWin9)  -1
 set winY(.treeWin9)  -1
 
-set analysisCommand /usr/local/share/scid/engines/phalanx-scid/phalanx-scid
+set analysisCommand /home/rafael/Dropbox/chess/engines/stockfish/stockfish
 set analysisChoices crafty
 
 set lite {#f3f3f3}
@@ -304,6 +304,7 @@ set ::windows::stats::display(y2010) 1
 set ::windows::stats::display(y2011) 1
 set ::windows::stats::display(y2012) 1
 set ::windows::stats::display(y2013) 1
+set ::windows::stats::display(y2014) 1
 set startup(book) 0
 set startup(crosstable) 0
 set startup(finder) 0
@@ -350,7 +351,7 @@ set twinSettings(result) No
 set twinSettings(round) Yes
 set twinSettings(setfilter) Yes
 set twinSettings(site) Yes
-set twinSettings(skipshort) Yes
+set twinSettings(skipshort) No
 set twinSettings(undelete) Yes
 set twinSettings(usefilter) No
 set twinSettings(variations) Yes
@@ -362,7 +363,7 @@ set fontOptions(Small) {{DejaVu Sans} 9 normal roman}
 set fontOptions(Tiny) {{DejaVu Sans} 8 normal roman}
 set fontOptions(Fixed) {{DejaVu Sans Mono} 10 normal roman}
 
-set initialDir(base) /home/rafael/Dropbox/chess/databases/big
+set initialDir(base) /home/rafael/Dropbox/chess/databases/chess.com
 set initialDir(book) .
 set initialDir(html) .
 set initialDir(tex) .
@@ -440,11 +441,27 @@ set ::docking::layout_list(1) {{MainWindowGeometry 1024x542+0+0 zoomed} {{.pw ve
 set ::docking::layout_list(2) {{.pw vertical} {TPanedwindow {{.pw.pw0 horizontal} {TNotebook .nb .fdockmain} {TNotebook .tb1 .fdockpgnWin}}}}
 set ::docking::layout_list(3) {}
 
-set ::autosave_opt {::windows::switcher::icons ::glist_Layouts ::glist_ColOrder(ly.glistWin1) ::glist_ColWidth(ly.glistWin1) ::glist_ColAnchor(ly.glistWin1) ::glist_Sort(ly.glistWin1) ::glist_FindBar(ly.glistWin1)}
+set ::autosave_opt {::windows::switcher::icons ::glist_Layouts ::glist_ColOrder(ly.glistWin1) ::glist_ColWidth(ly.glistWin1) ::glist_ColAnchor(ly.glistWin1) ::glist_Sort(ly.glistWin1) ::glist_FindBar(ly.glistWin1) ::glist_ColOrder(ly.treeBest1) ::glist_ColWidth(ly.treeBest1) ::glist_ColAnchor(ly.treeBest1) ::glist_Sort(ly.treeBest1) ::glist_FindBar(ly.treeBest1) ::glist_ColOrder(ly.treeBest2) ::glist_ColWidth(ly.treeBest2) ::glist_ColAnchor(ly.treeBest2) ::glist_Sort(ly.treeBest2) ::glist_FindBar(ly.treeBest2) ::gbrowser::size ::glist_ColOrder(ly.glistWin2) ::glist_ColWidth(ly.glistWin2) ::glist_ColAnchor(ly.glistWin2) ::glist_Sort(ly.glistWin2) ::glist_FindBar(ly.glistWin2)}
 set ::windows::switcher::icons 1
 set ::glist_Layouts {}
-set ::glist_ColOrder(ly.glistWin1) {{7} {1} {2} {3} {4} {5} {6} {23} {22} {8} {9} {10} {11} {12} {13} {14} {15} {16} {0}}
-set ::glist_ColWidth(ly.glistWin1) {112 50 50 120 40 120 40 80 102 30 107 30 20 20 20 20 35 50 30 100 40 40 109 140}
+set ::glist_ColOrder(ly.glistWin1) {7 1 2 3 4 5 6 23 22 8 9 10 12 13 14 15 16 0}
+set ::glist_ColWidth(ly.glistWin1) {137 50 50 120 40 120 40 80 102 30 107 30 20 20 20 20 35 50 30 100 40 40 109 140}
 set ::glist_ColAnchor(ly.glistWin1) {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}}
-set ::glist_Sort(ly.glistWin1) {22 + 7 - 0 +}
+set ::glist_Sort(ly.glistWin1) {0 +}
 set ::glist_FindBar(ly.glistWin1) 1
+set ::glist_ColOrder(ly.treeBest1) {{7} {1} {2} {3} {4} {5} {6} {23} {22} {8} {9} {10} {11} {12} {13} {14} {15} {16} {0}}
+set ::glist_ColWidth(ly.treeBest1) {{50} {50} {50} {120} {40} {120} {40} {80} {200} {30}  {200} {30} {20} {20} {20} {20} {35} {50} {30} {100} {40} {40} {50} {140}}
+set ::glist_ColAnchor(ly.treeBest1) {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}}
+set ::glist_Sort(ly.treeBest1) {22 - 7 - 0 +}
+set ::glist_FindBar(ly.treeBest1) 1
+set ::glist_ColOrder(ly.treeBest2) {{7} {1} {2} {3} {4} {5} {6} {23} {22} {8} {9} {10} {11} {12} {13} {14} {15} {16} {0}}
+set ::glist_ColWidth(ly.treeBest2) {{50} {50} {50} {120} {40} {120} {40} {80} {200} {30}  {200} {30} {20} {20} {20} {20} {35} {50} {30} {100} {40} {40} {50} {140}}
+set ::glist_ColAnchor(ly.treeBest2) {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}}
+set ::glist_Sort(ly.treeBest2) {22 - 7 - 0 +}
+set ::glist_FindBar(ly.treeBest2) 1
+set ::gbrowser::size 65
+set ::glist_ColOrder(ly.glistWin2) {{7} {1} {2} {3} {4} {5} {6} {23} {22} {8} {9} {10} {11} {12} {13} {14} {15} {16} {0}}
+set ::glist_ColWidth(ly.glistWin2) {{50} {50} {50} {120} {40} {120} {40} {80} {200} {30}  {200} {30} {20} {20} {20} {20} {35} {50} {30} {100} {40} {40} {50} {140}}
+set ::glist_ColAnchor(ly.glistWin2) {{e} {c} {c} {w} {c} {w} {c} {w} {w} {e}  {w} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {c} {w}}
+set ::glist_Sort(ly.glistWin2) {0 +}
+set ::glist_FindBar(ly.glistWin2) 1

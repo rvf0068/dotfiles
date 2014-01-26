@@ -6,6 +6,6 @@ set recentFiles(menu) 5
 
 set recentFiles(extra) 5
 
-set recentFiles(data) /home/rafael/Dropbox/chess/databases/big/big.si4
+set recentFiles(data) {/home/rafael/Dropbox/chess/databases/chess.com/online.si4 /home/rafael/Dropbox/chess/test/anewtest.match-017-001.pgn /home/rafael/Dropbox/chess/test/anewtest.match-027-001.pgn /home/rafael/Dropbox/chess/databases/big/big.si4}
 
-set ::recentSort {/home/rafael/Dropbox/chess/databases/big/big {22 + 7 - 0 +}}
+set ::recentSort {/home/rafael/Dropbox/chess/databases/chess.com/online {0 +} /home/rafael/Dropbox/chess/databases/big/big {7 +}}

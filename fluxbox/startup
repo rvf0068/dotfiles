@@ -18,7 +18,7 @@
 xscreensaver -no-splash &
 osdsh -c green -p1 -a2 -o 2 -d 50 &
 ibus-daemon &
-feh --bg-scale ~/Dropbox/wallpapers/NpL5j.jpg &
+feh --bg-scale ~/Dropbox/wallpapers/Saucy_Salamander_Abstract_by_José_Vera_alcivar.jpg &
 gnome-sound-applet &
 emacs &
 

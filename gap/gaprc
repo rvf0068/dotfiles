@@ -1,0 +1,11 @@
+Read("/home/rafael/Dropbox/gap/functions.gap");
+Read("/home/rafael/Dropbox/gap/miguel.gap");
+Read("/home/rafael/Dropbox/gap/graph.gap");
+Read("/home/rafael/Dropbox/gap/map/betti.g");
+Read("/home/rafael/Dropbox/gap/homology.gap");
+Read("/home/rafael/Dropbox/gap/data.gap");
+Read("/home/rafael/Dropbox/gap/arcs.gap");
+Read("/home/rafael/Dropbox/gap/cagescode.gap");
+Read("/home/rafael/Dropbox/gap/posets.gap");
+
+

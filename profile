@@ -26,4 +26,5 @@ MANPATH=/usr/local/texlive/2013/texmf/doc/man:$MANPATH; export MANPATH
 INFOPATH=/usr/local/texlive/2013/texmf/doc/info:$INFOPATH; export INFOPATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+export PATH="$HOME/.cabal/bin:$PATH"
 

@@ -22,8 +22,8 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 PATH=/usr/local/texlive/2014/bin/x86_64-linux:$PATH; export PATH
-MANPATH=/usr/local/texlive/2014/texmf/doc/man:$MANPATH; export MANPATH
-INFOPATH=/usr/local/texlive/2014/texmf/doc/info:$INFOPATH; export INFOPATH
+MANPATH=/usr/local/texlive/2014/texmf-dist/doc/man:$MANPATH; export MANPATH
+INFOPATH=/usr/local/texlive/2014/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.cabal/bin:$PATH"

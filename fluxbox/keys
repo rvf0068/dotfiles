@@ -149,6 +149,7 @@ Control Mod1 e :exec emacs
 Control Mod1 f :exec firefox
 Control Mod1 g :exec gmusicbrowser
 Control Mod1 j :exec jdownloader
+Control Mod1 k :exec megasync
 Control Mod1 l :exec xscreensaver-command -lock
 Control Mod1 m :RootMenu
 Control Mod1 n :exec nautilus --no-desktop

@@ -118,3 +118,6 @@ update-org () {
 get-mail () {
     (getmail -g /home/rafael/Dropbox/getmail/ && alert)
 }
+
+PERL_MB_OPT="--install_base \"/home/rafael/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/rafael/perl5"; export PERL_MM_OPT;

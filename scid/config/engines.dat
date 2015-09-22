@@ -1,4 +1,4 @@
-# Analysis engines list file for Scid 4.5.2 with UCI support
+# Analysis engines list file for Scid 4.3 with UCI support
 
 engine {
   Name Stockfish

@@ -164,9 +164,9 @@ Control Mod1 y :exec /opt/copy-client/CopyAgent
 Control Mod1 z :exec gdmflexiserver -a
 
 #Volume.  Will lower or raise volume by 5%.  The third key binding will toggle mute.
-None XF86AudioLowerVolume       :Exec amixer sset Master,0 5%-
-None XF86AudioRaiseVolume       :Exec amixer sset Master,0 5%+
-None XF86AudioMute              :Exec amixer sset Master,0 toggle
+None XF86AudioLowerVolume       :Exec amixer -D pulse set Master 5%-
+None XF86AudioRaiseVolume       :Exec amixer -D pulse set Master 5%+
+None XF86AudioMute              :Exec amixer -D pulse set Master toggle
 
 #Brightness
 None XF86MonBrightnessUp        :Exec xbacklight -set 50%

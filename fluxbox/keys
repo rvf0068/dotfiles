@@ -142,12 +142,12 @@ Control Mod4 F12 :TakeToWorkspace 12
 
 Control Mod1 1 :ClientMenu
 Control Mod1 a :exec audacious
-Control Mod1 b :exec batti
 Control Mod1 c :exec emacsclient -n -e '(make-capture-frame)'
 Control Mod1 d :exec dropbox start
 Control Mod1 e :exec emacs
 Control Mod1 f :exec firefox
 Control Mod1 g :exec gmusicbrowser
+Control Mod1 h :exec whatsie
 Control Mod1 j :exec jdownloader
 Control Mod1 k :exec megasync
 Control Mod1 l :exec xscreensaver-command -lock
@@ -156,12 +156,10 @@ Control Mod1 n :exec nautilus --no-desktop
 Control Mod1 p :exec nm-applet
 Control Mod1 r :MacroCmd {Exec osdctl -s "Reconfiguring,"} {Reconfigure}
 Control Mod1 s :exec scid
-Control Mod1 t :exec java -jar ~/Ubuntu\ One/apps/tomighty-0.7.1.jar
-Control Mod1 u :exec jupiter
 Control Mod1 v :exec pavucontrol
 Control Mod1 w :ArrangeWindows
-Control Mod1 y :exec /opt/copy-client/CopyAgent
-Control Mod1 z :exec gdmflexiserver -a
+# use dm-tool instead, see dm-tool --help
+# Control Mod1 z :exec gdmflexiserver -a
 
 #Volume.  Will lower or raise volume by 5%.  The third key binding will toggle mute.
 None XF86AudioLowerVolume       :Exec amixer -D pulse set Master 5%-
@@ -169,5 +167,5 @@ None XF86AudioRaiseVolume       :Exec amixer -D pulse set Master 5%+
 None XF86AudioMute              :Exec amixer -D pulse set Master toggle
 
 #Brightness
-None XF86MonBrightnessUp        :Exec xbacklight -set 50%
+None XF86MonBrightnessUp        :Exec xbacklight -inc 10%
 None XF86MonBrightnessDown      :Exec xbacklight -dec 10%

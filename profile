@@ -21,10 +21,12 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-PATH=/usr/local/texlive/2016/bin/x86_64-linux:$PATH; export PATH
-MANPATH=/usr/local/texlive/2016/texmf-dist/doc/man:$MANPATH; export MANPATH
-INFOPATH=/usr/local/texlive/2016/texmf-dist/doc/info:$INFOPATH; export INFOPATH
+PATH=/usr/local/texlive/2017/bin/x86_64-linux:$PATH; export PATH
+MANPATH=/usr/local/texlive/2017/texmf-dist/doc/man:$MANPATH; export MANPATH
+INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.cabal/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 
+JUPYTER_GAP_EXECUTABLE="gap -l \";~/Dropbox/gaplocal\""; export JUPYTER_GAP_EXECUTABLE

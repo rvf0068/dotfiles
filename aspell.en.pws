@@ -1,4 +1,4 @@
-personal_ws-1.1 en 70 
+personal_ws-1.1 en 72 
 triangleless
 isometries
 circulants
@@ -7,8 +7,8 @@ isomorphisms
 Toroidal
 Escalante
 orientable
-bottommost
 bowtie
+bottommost
 piecewise
 nauty
 borderless
@@ -16,8 +16,8 @@ Circulant
 circulant
 unclassifiability
 Meringer
-Wikipedia
 subcases
+Wikipedia
 automorphism
 bijection
 isomorphy
@@ -25,19 +25,20 @@ subdirectory
 Larrión
 subsubcases
 Markus
+tikz
 orientably
 cardinality
 isomorphism
 automorphisms
 iff
 favicon
-tikz
-kramdown
 Cofinite
+beamer
 verifications
 Eulerian
 morphism
 Szwarcfiter
+kramdown
 classifiability
 quartics
 homeomorphic

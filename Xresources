@@ -1,8 +1,10 @@
 ! Emacs.font: Consolas-13
 ! Emacs.font: Liberation Mono-12
 ! Emacs.font: Monospace-12
-Emacs.font: Ubuntu Mono-15
 ! Emacs.font: Source Code Pro-13
+Emacs24.font: Ubuntu Mono-16
+Emacs.font: Ubuntu Mono-16
+Emacs24.toolBar: off
 Emacs.toolBar: off
 Emacs.verticalScrollBars: off
 Emacs.geometry: 97x26+0+30

@@ -27,6 +27,6 @@ INFOPATH=/usr/local/texlive/2017/texmf-dist/doc/info:$INFOPATH; export INFOPATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.cabal/bin:$PATH"
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 JUPYTER_GAP_EXECUTABLE="gap -l \";~/Dropbox/gaplocal\""; export JUPYTER_GAP_EXECUTABLE
